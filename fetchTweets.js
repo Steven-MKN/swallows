@@ -4,7 +4,7 @@ const axios = require('axios');
 const { twitterGet, getAuthHeader } = require('./twitterAuth');
 
 const BASE_URL = 'https://api.twitter.com/2';
-const MAX_RESULTS = 100;
+const MAX_RESULTS = parseInt(process.env.MAX_RESULTS || '1');
 const MAX_PAGES = parseInt(process.env.MAX_PAGES || '1');
 const DAYS_OLD = parseInt(process.env.DAYS_OLD || '7');
 
