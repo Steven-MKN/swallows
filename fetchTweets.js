@@ -1,7 +1,6 @@
-// fetchTweets.js
-require('dotenv').config();
 const axios = require('axios');
 const { twitterGet, getAuthHeader } = require('./twitterAuth');
+require('dotenv').config();
 
 const BASE_URL = 'https://api.twitter.com/2';
 const MAX_RESULTS = parseInt(process.env.MAX_RESULTS || '1');

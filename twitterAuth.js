@@ -1,10 +1,9 @@
-// twitterAuth.js
 const crypto = require('crypto');
 const axios = require('axios');
 const OAuth = require('oauth-1.0a');
+
 require('dotenv').config();
 
-// Replace with your real credentials
 const twitterConfig = {
   consumer_key: process.env.TWITTER_CONSUMER_KEY,
   consumer_secret: process.env.TWITTER_CONSUMER_SECRET,

@@ -1,7 +1,6 @@
-// deleteTweets.js
-require('dotenv').config();
 const axios = require('axios');
 const { getAuthHeader } = require('./twitterAuth');
+require('dotenv').config();
 
 const BASE_URL = 'https://api.twitter.com/2';
 
@@ -10,10 +9,10 @@ async function deleteTweet(id) {
   const headers = getAuthHeader(url, 'DELETE');
   try {
     const res = await axios.delete(url, { headers });
-    console.log(`✅ Deleted tweet ${id}`);
+    console.log(`Deleted tweet ${id}`);
     return res.data;
   } catch (error) {
-    console.error(`❌ Failed to delete ${id}:`, error.response?.data || error.message);
+    console.error(`Failed to delete ${id}:`, error.response?.data || error.message);
   }
 }
 
